@@ -1,0 +1,28 @@
+#main-home .title p {
+  font-weight: 500;
+  font-size: larger;
+}
+#main-home .content {
+  margin-top: 8%;
+  font-weight: 400;
+  font-size: medium;
+}
+#main-home .info-1 {
+  margin-top: 5%;
+  font-weight: 400;
+  font-size: medium;
+}
+#main-home .info-2 {
+  margin-bottom: 5%;
+  font-weight: 400;
+  font-size: medium;
+}
+#main-home .thanks {
+  margin-top: 5%;
+  font-weight: 400;
+  font-size: medium;
+}
+a.app-links,
+a.app-links:visited {
+  color: teal;
+}
