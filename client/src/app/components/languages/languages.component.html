@@ -1,0 +1,26 @@
+<table *ngIf="!isLoading" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef> Code </th>
+    <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="native">
+    <th mat-header-cell *matHeaderCellDef> Native </th>
+    <td mat-cell *matCellDef="let element"> {{element.native}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rtf">
+    <th mat-header-cell *matHeaderCellDef> RTF </th>
+    <td mat-cell *matCellDef="let element"> {{element.rtf}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-spinner *ngIf="isLoading" mode="indeterminate"></mat-spinner>
