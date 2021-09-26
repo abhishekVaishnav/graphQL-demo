@@ -18,16 +18,15 @@ app.use(cors());
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
-
 app.use('/', express.static(path.join(__dirname, 'public/dist')));
 
 // Connect Cluster DB
 mongoose.connect('mongodb+srv://admin:admin@cluster0.kxuzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 mongoose.connection.once('open', () => {
   console.log('Database is running!');
-})
+});
 
-app.use('/graphql', graphqlHTTP.graphqlHTTP({
+router.use('/graphql', graphqlHTTP.graphqlHTTP({
   schema,
   graphiql: true,
 }));
