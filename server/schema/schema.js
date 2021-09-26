@@ -137,7 +137,7 @@ const Mutations = new GraphQLObjectType({
         languages: { type: new GraphQLNonNull(new GraphQLList(GraphQLString)) },
       },
       resolve(parent, args) {
-        const language = new Languages({
+        const country = new Countries({
           name: args.name,
           age: args.age,
           native: args.native,
@@ -147,7 +147,7 @@ const Mutations = new GraphQLObjectType({
           continentId: args.continentId,
           languages: args.languages,
         });
-        return language.save();
+        return country.save();
       }
     },
   }
