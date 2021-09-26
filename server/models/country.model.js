@@ -11,10 +11,10 @@ const bookSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'continents'
   },
-  languages: {
+  languages: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'languages'
-  },
+  }],
 });
 
 module.exports = mongoose.model('Book', bookSchema);

@@ -31,7 +31,7 @@ router.use('/graphql', graphqlHTTP.graphqlHTTP({
   graphiql: true,
 }));
 
-app.get('/*', function(req, res, next) {
+app.get('/', function(req, res, next) {
   console.log('directory: ', process.cwd())
   console.log('path dist: ', path.join(process.cwd(), 'public/dist'))
   res.sendFile(process.cwd() + '/public/dist/index.html');
